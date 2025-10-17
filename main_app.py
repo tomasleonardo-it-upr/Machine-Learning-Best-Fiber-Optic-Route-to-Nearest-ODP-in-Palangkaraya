@@ -1,10 +1,10 @@
 import joblib
 # --- Load model ML
-model_path = './models/gradientboosting.pkl'
+model_path = '/models/gradientboosting.pkl'
 stacking_model = joblib.load(model_path)
 
 # --- Load scaler
-scaler_path = './models/standard_scaler.pkl'
+scaler_path = '/models/standard_scaler.pkl'
 scaler = joblib.load(scaler_path)
 
 
