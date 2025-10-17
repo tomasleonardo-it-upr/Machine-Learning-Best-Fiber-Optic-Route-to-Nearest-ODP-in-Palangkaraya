@@ -1,11 +1,11 @@
 import joblib
 # --- Load model ML
-model_path = './models/gradientboosting.pkl'
-stacking_model = joblib.load(model_path)
+
+stacking_model = os.path.join("models", "gradientboosting.pkl")
 
 # --- Load scaler
-scaler_path = './models/standard_scaler.pkl'
-scaler = joblib.load(scaler_path)
+
+scaler = os.path.join("models", "standard_scaler.pkl")
 
 
 # --- Fungsi Haversine
