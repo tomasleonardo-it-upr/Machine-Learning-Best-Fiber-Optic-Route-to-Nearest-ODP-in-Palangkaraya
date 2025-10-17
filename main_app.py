@@ -1,4 +1,4 @@
-pip install -r requirements.txt
+
 
 # --- Load model ML
 model_path = '/models/gradientboosting.pkl'
