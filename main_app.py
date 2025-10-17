@@ -1,21 +1,11 @@
 
 # --- Load model ML
-model_path = os.path.join("models", "gradientboosting.pkl")
-scaler_path = os.path.join("models", "standard_scaler.pkl")
+model_path = './models/gradientboosting.pkl'
+stacking_model = joblib.load(model_path)
 
-# Cek keberadaan file model
-if not os.path.exists(model_path):
-    st.error(f"Model file tidak ditemukan di: {model_path}")
-else:
-    stacking_model = joblib.load(model_path)
-    st.success("Model berhasil dimuat!")
-
-# Cek keberadaan file scaler
-if not os.path.exists(scaler_path):
-    st.error(f"Scaler file tidak ditemukan di: {scaler_path}")
-else:
-    scaler = joblib.load(scaler_path)
-    st.success("Scaler berhasil dimuat!")
+# --- Load scaler
+scaler_path = './models/standard_scaler.pkl'
+scaler = joblib.load(scaler_path)
 
 
 # --- Fungsi Haversine
