@@ -1,3 +1,5 @@
+pip install -r requirements.txt
+
 
 # --- Fungsi Haversine
 def haversine(lat1, lon1, lat2, lon2):
