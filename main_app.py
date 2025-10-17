@@ -4,6 +4,13 @@
 model_path = 'models/gradientboosting.pkl'
 stacking_model = joblib.load(model_path)
 
+# Cek apakah file ada
+if not os.path.exists(model_path):
+    st.error(f"Model file tidak ditemukan di: {model_path}")
+else:
+    stacking_model = joblib.load(model_path)
+    st.success("Model berhasil dimuat!")
+
 # --- Load scaler
 scaler_path = 'models/standard_scaler.pkl'
 scaler = joblib.load(scaler_path)
