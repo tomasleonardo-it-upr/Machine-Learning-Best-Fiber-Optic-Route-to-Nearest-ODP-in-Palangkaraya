@@ -1,5 +1,13 @@
 pip install -r requirements.txt
 
+# --- Load model ML
+model_path = '/models/gradientboosting.pkl'
+stacking_model = joblib.load(model_path)
+
+# --- Load scaler
+scaler_path = '/models/standard_scaler.pkl'
+scaler = joblib.load(scaler_path)
+
 
 # --- Fungsi Haversine
 def haversine(lat1, lon1, lat2, lon2):
@@ -40,9 +48,9 @@ def norm(col, smaller_better=True):
     return 1 - (col - min_val) / (max_val - min_val) if smaller_better else (col - min_val) / (max_val - min_val)
 
 # --- Load data
-customers = pd.read_excel('/content/drive/MyDrive/Rekomendasi ODP Palangkaraya/3/customers.xlsx')
-odp = pd.read_excel('/content/drive/MyDrive/Rekomendasi ODP Palangkaraya/3/odp.xlsx')
-poi = pd.read_excel('/content/drive/MyDrive/Rekomendasi ODP Palangkaraya/3/poi.xlsx')
+customers = pd.read_excel('/data/customers.xlsx')
+odp = pd.read_excel('/data/odp.xlsx')
+poi = pd.read_excel('/data/poi.xlsx')
 
 # --- Input user
 user_name = input("Masukkan Nama user: ")
