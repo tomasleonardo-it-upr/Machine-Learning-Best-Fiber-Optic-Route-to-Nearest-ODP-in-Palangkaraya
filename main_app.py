@@ -1,7 +1,7 @@
 
 
 # --- Load model ML
-model_path = 'models/gradientboosting.pkl'
+model_path = '/models/gradientboosting.pkl'
 stacking_model = joblib.load(model_path)
 
 # Cek apakah file ada
@@ -12,7 +12,7 @@ else:
     st.success("Model berhasil dimuat!")
 
 # --- Load scaler
-scaler_path = 'models/standard_scaler.pkl'
+scaler_path = '/models/standard_scaler.pkl'
 scaler = joblib.load(scaler_path)
 
 
