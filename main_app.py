@@ -1,3 +1,7 @@
+import os          # <-- WAJIB ada
+import joblib
+import streamlit as st
+
 
 # --- Load model ML
 
