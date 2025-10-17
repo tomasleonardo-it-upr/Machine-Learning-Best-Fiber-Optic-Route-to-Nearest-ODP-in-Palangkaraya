@@ -4,4 +4,3 @@ numpy
 folium
 requests
 joblib
-os 
