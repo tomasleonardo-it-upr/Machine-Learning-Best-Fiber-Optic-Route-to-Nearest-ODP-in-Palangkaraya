@@ -1,4 +1,4 @@
-
+import joblib
 # --- Load model ML
 model_path = './models/gradientboosting.pkl'
 stacking_model = joblib.load(model_path)
